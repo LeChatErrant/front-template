@@ -1,6 +1,6 @@
 # Front template
 
-**Work still in progress**
+> This work is **still in progress** and is subject to many changes
 
 This is my first attempt to build a robust, modern front-end stack
 
