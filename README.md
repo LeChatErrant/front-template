@@ -1,34 +1,49 @@
-# TypeScript & Styled Components Next.js example
+# Front template
 
-This is a really simple project that show the usage of Next.js with TypeScript and Styled Components.
+**Work still in progress**
 
-## Preview
+This is my first attempt to build a robust, modern front-end stack
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+Later, it will be integrated with
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-typescript-styled-components)
+- **[API-template](https://github.com/LeChatErrant/API-template)** , to provide a backend
+- **[Devops-template](https://github.com/LeChatErrant/devops-template)**, to add caching on the top of the front end
+  along with scaling capabilities
 
-## Deploy your own
+# Preview
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+The front-end is automatically deployed and available
+on **[https://front-template.vercel.app](https://front-template.vercel.app)**
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript-styled-components&project-name=with-typescript-styled-components&repository-name=with-typescript-styled-components)
+# Getting started
 
-## How to use it?
+1. Install dependencies with `npm install`
+2. Run `npm run dev`
+3. Open your navigator and go to **[localhost:3000](http://localhost:3000)**
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+# Technologies
 
-```bash
-npx create-next-app --example with-typescript-styled-components with-typescript-styled-components-app
-# or
-yarn create next-app --example with-typescript-styled-components with-typescript-styled-components-app
-```
+- React
+- NextJS (Server Side Rendering)
+- SWR
+- Styled components
+- Jest
+- Eslint
+- Prettier
+- Vercel
+- Husky
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+# How to contribute
 
-## Notes
+1. Fork it (**<https://github.com/LeChatErrant/front-template/fork>**)
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
 
-This is an amalgamation of the 2 existing examples:
+Issues and comments welcomed ! :wink:
 
-- [with-typescript](https://github.com/vercel/next.js/tree/canary/examples/with-typescript)
-- [with-styled-components](https://github.com/vercel/next.js/tree/canary/examples/with-styled-components)
+## Contributors
+
+![GitHub Logo](https://github.com/LeChatErrant.png?size=30) &nbsp; **[LeChatErrant](https://github.com/LeChatErrant)** -
+creator and maintainer
