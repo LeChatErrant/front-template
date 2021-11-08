@@ -23,15 +23,15 @@ on **[https://front-template.vercel.app](https://front-template.vercel.app)**
 
 # Technologies
 
-- React
-- NextJS (Server Side Rendering)
-- SWR
-- Styled components
-- Jest
-- Eslint
-- Prettier
-- Vercel
-- Husky
+- [React](https://reactjs.org/)
+- [NextJS (SSR)](https://nextjs.org/)
+- [SWR (data fetching)](https://swr.vercel.app/)
+- [Styled components](https://styled-components.com/)
+- [Jest (testing)](https://jestjs.io/)
+- [Eslint (style)](https://eslint.org/)
+- [Prettier (formatting)](https://prettier.io/)
+- [Husky (pre-commit hooks)](https://typicode.github.io/husky/#/)
+- [Vercel (deployment)](https://vercel.com/)
 
 # How to contribute
 
