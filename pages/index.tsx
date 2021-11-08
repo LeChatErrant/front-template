@@ -6,5 +6,6 @@ const Title = styled.h1`
 `
 
 export default function Home() {
-  return <Title>My page</Title>
+  const a = 'Whassup'
+  return <Title>{a}</Title>
 }
