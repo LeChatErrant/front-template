@@ -26,4 +26,8 @@ export default createTheme({
       main: '#ff0000',
     },
   },
+  typography: {
+    fontFamily: 'Roboto',
+    fontSize: 16,
+  },
 })
