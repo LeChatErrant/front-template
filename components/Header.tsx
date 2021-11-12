@@ -1,15 +1,8 @@
-import {
-  AppBar,
-  Icon,
-  IconButton,
-  InputAdornment,
-  TextField,
-  Toolbar,
-} from '@mui/material'
-import SearchIcon from '@mui/icons-material/Search'
+import { AppBar, Icon, IconButton, Toolbar } from '@mui/material'
 import Image from 'next/image'
 import Link from 'next/link'
 import styled from 'styled-components'
+import SearchBar from './SearchBar'
 
 const NavBar = styled(AppBar)`
   background-color: white;
@@ -29,17 +22,6 @@ const Logo = styled(IconButton)`
   }
 `
 
-const SearchBar = styled(TextField)`
-  & .MuiOutlinedInput-root {
-    & fieldset {
-      border-radius: 10px;
-    }
-  }
-
-  input {
-  }
-`
-
 export default function Header() {
   return (
     <NavBar position="sticky">
@@ -55,18 +37,7 @@ export default function Header() {
             </Icon>
           </Logo>
         </Link>
-        <SearchBar
-          variant="outlined"
-          size="small"
-          placeholder="Search"
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <SearchIcon />
-              </InputAdornment>
-            ),
-          }}
-        />
+        <SearchBar />
       </Toolbar>
     </NavBar>
   )
