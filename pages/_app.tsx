@@ -10,7 +10,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <Layout>
       <Head>
         <title>App</title>
-        <link href="/favicon.ico" rel="icon" />
+        <link href="/favicon/favicon-32x32.png" rel="icon" />
       </Head>
       <MuiThemeProvider theme={theme}>
         <CssBaseline />
