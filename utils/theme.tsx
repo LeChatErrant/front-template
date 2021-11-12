@@ -9,13 +9,13 @@ declare module '@mui/material/styles/createPalette' {
 export default createTheme({
   palette: {
     primary: {
-      main: '#0000ff',
+      main: '#ff00ff',
     },
     secondary: {
       main: '#00ff00',
     },
     text: {
-      primary: '#000000',
+      primary: '#ff00ff',
       secondary: '#ffffff',
     },
     background: {

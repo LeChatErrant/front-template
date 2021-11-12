@@ -13,7 +13,7 @@ export default function Home() {
         <title>Create Next App</title>
       </Head>
       <Title>Hello world !</Title>
-      <Link href="/">To home page</Link>
+      <Link href="/post/id">To post</Link>
     </>
   )
 }
