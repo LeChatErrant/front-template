@@ -9,21 +9,21 @@ declare module '@mui/material/styles/createPalette' {
 export default createTheme({
   palette: {
     primary: {
-      main: 'blue',
+      main: '#0000ff',
     },
     secondary: {
-      main: 'red',
+      main: '#00ff00',
     },
     text: {
-      primary: 'black',
-      secondary: 'white',
+      primary: '#000000',
+      secondary: '#ffffff',
     },
     background: {
-      default: 'white',
+      default: '#ffffff',
       gradient: 'linear-gradient(45deg, #833AB4, #FD1D1D, #FCB045)',
     },
     error: {
-      main: 'red',
+      main: '#ff0000',
     },
   },
 })
