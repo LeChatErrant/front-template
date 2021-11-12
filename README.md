@@ -27,6 +27,7 @@ on **[https://front-template.vercel.app](https://front-template.vercel.app)**
 - [NextJS (SSR)](https://nextjs.org/)
 - [SWR (data fetching)](https://swr.vercel.app/)
 - [Styled components](https://styled-components.com/)
+- [MaterialUI](https://mui.com/)
 - [Jest (testing)](https://jestjs.io/)
 - [Eslint (styling)](https://eslint.org/)
 - [Prettier (formatting)](https://prettier.io/)
