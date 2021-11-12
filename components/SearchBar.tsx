@@ -6,29 +6,29 @@ import { useState } from 'react'
 
 const StyledInput = styled(TextField)`
   & .MuiOutlinedInput-root {
+    width: 300px;
     padding-right: 0;
 
     & fieldset {
       border-radius: 120px;
     }
   }
-
-  input {
-  }
 `
 
 export default function SearchBar() {
+  const [input, setInput] = useState('')
   return (
     <StyledInput
       variant="outlined"
       size="small"
       placeholder="Search"
+      value={input}
       onInput={(e) => {
-        console.log(e.target.value)
+        const target = e.target as HTMLTextAreaElement
+        setInput(target.value)
       }}
       onKeyPress={(e) => {
         if (e.key === 'Enter') {
-          console.log(`Submited ${e.target.value}`)
         }
       }}
       InputProps={{
@@ -37,11 +37,12 @@ export default function SearchBar() {
             <SearchIcon />
           </InputAdornment>
         ),
-        endAdornment: true ? (
-          <IconButton>
-            <CancelIcon />
-          </IconButton>
-        ) : null,
+        endAdornment:
+          input != '' ? (
+            <IconButton onClick={() => setInput('')}>
+              <CancelIcon />
+            </IconButton>
+          ) : null,
       }}
     />
   )
