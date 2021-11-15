@@ -1,10 +1,5 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import styled from 'styled-components'
-
-const Title = styled.h1`
-  color: blue;
-`
 
 export default function Home() {
   return (
@@ -12,7 +7,7 @@ export default function Home() {
       <Head>
         <title>Home</title>
       </Head>
-      <Title>Home!</Title>
+      <h1>Home!</h1>
       <Link href="/post/id">To post</Link>
     </>
   )
