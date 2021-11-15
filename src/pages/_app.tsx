@@ -4,6 +4,7 @@ import { CssBaseline, ThemeProvider as MuiThemeProvider } from '@mui/material'
 import { ThemeProvider } from 'styled-components'
 import Layout from '../components/Layout'
 import theme from '../utils/theme'
+import Head from 'next/head'
 
 async function fetcher(input: RequestInfo, init: RequestInit) {
   const res = await fetch(input, init)
@@ -19,6 +20,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       }}
     >
       <Layout>
+        <Head>
+          <title> App </title>
+        </Head>
         <MuiThemeProvider theme={theme}>
           <CssBaseline />
           <ThemeProvider theme={theme}>

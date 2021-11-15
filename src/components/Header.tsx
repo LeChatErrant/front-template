@@ -26,7 +26,7 @@ export default function Header() {
   return (
     <NavBar position="sticky">
       <Toolbar>
-        <Link href="/">
+        <Link href="/" passHref>
           <Logo>
             <Icon>
               <Image
