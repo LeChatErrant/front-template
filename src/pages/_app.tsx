@@ -21,7 +21,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     >
       <Layout>
         <Head>
-          <title> App </title>
+          <title> Front template </title>
         </Head>
         <MuiThemeProvider theme={theme}>
           <CssBaseline />

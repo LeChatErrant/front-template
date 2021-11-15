@@ -12,7 +12,7 @@ export default function Home() {
       <Head>
         <title>Home</title>
       </Head>
-      <Title>Hello world !</Title>
+      <Title>Home!</Title>
       <Link href="/post/id">To post</Link>
     </>
   )
