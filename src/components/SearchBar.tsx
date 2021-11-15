@@ -29,6 +29,7 @@ export default function SearchBar() {
       }}
       onKeyPress={(e) => {
         if (e.key === 'Enter') {
+          // TODO
         }
       }}
       InputProps={{

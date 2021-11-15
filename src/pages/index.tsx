@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Home</title>
       </Head>
       <Title>Hello world !</Title>
       <Link href="/post/id">To post</Link>
