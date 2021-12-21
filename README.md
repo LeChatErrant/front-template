@@ -7,8 +7,8 @@ This is my first attempt to build a robust, modern front-end stack
 Later, it will be integrated with
 
 - **[API-template](https://github.com/LeChatErrant/API-template)** , to provide a backend
-- **[Devops-template](https://github.com/LeChatErrant/devops-template)**, to add caching on the top of the front end
-  along with scaling capabilities
+- **[Ops-template](https://github.com/LeChatErrant/ops-template)**, to add caching on the top of the front end along
+  with scaling capabilities
 
 # Preview
 
