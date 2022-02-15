@@ -10,7 +10,7 @@ interface LogoProps {
 
 export default function Logo({ logoSize, imagePath, ...props }: LogoProps) {
   return (
-    <StyledLogo logoSize={logoSize} {...props}>
+    <StyledLogo logo_size={logoSize} {...props}>
       <Icon>
         <Image src={imagePath} width={logoSize} height={logoSize} />
       </Icon>
