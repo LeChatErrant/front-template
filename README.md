@@ -7,8 +7,8 @@ This is my first attempt to build a robust, modern front-end stack
 Later, it will be integrated with
 
 - **[API-template](https://github.com/LeChatErrant/API-template)** , to provide a backend
-- **[Ops-template](https://github.com/LeChatErrant/ops-template)**, to add caching on the top of the front end along
-  with scaling capabilities
+- **[ops-template](https://github.com/LeChatErrant/ops-template)**, to add caching on the top of the front end along
+- **[lantern](https://github.com/LeChatErrant/lantern)**, a CLI to assist development and write boilerplate code for you
 
 # Preview
 
@@ -23,16 +23,16 @@ on **[https://front-template.vercel.app](https://front-template.vercel.app)**
 
 # Technologies
 
-- [React](https://reactjs.org/)
-- [NextJS (SSR)](https://nextjs.org/)
-- [SWR (data fetching)](https://swr.vercel.app/)
-- [Styled components](https://styled-components.com/)
-- [MaterialUI](https://mui.com/)
-- [Jest (testing)](https://jestjs.io/)
-- [Eslint (styling)](https://eslint.org/)
-- [Prettier (formatting)](https://prettier.io/)
-- [Husky (pre-commit hooks)](https://typicode.github.io/husky/#/)
-- [Vercel (deployment)](https://vercel.com/)
+- **[React](https://reactjs.org/)** : Web framework
+- **[NextJS (SSR)](https://nextjs.org/)** : SSR (Server Side Rendering)
+- **[SWR (data fetching)](https://swr.vercel.app/)** : Data fetching
+- **[Styled components](https://styled-components.com/)** : CSS in JS
+- **[MaterialUI](https://mui.com/)** : UI library
+- **[Jest (testing)](https://jestjs.io/)** : Testing
+- **[Eslint (styling)](https://eslint.org/)** : Code styling
+- **[Prettier (formatting)](https://prettier.io/)** : Code formating
+- **[Husky (pre-commit hooks)](https://typicode.github.io/husky/#/)** : Pre commit hooks
+- **[Vercel (deployment)](https://vercel.com/)** : Continuous deployment and PR previews
 
 # How to contribute
 
