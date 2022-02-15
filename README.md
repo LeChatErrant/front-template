@@ -14,7 +14,7 @@
 
 &nbsp;
 
-This project provides a **typesafe**, **production ready** modern website template, fully integrated with **[API-template](https://github.com/LeChatErrant/API-template)**.
+This project provides a **typesafe**, **production ready** modern website template, fully integrated with **[API-template](https://github.com/LeChatErrant/API-template)** and with a complete **development environment**
 
 It gives your project a clean base to start since a lot of choices were already made, and it comes with out of the box features, such as **theming**, **authentification**, or **dark mode**
 
