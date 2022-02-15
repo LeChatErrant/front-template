@@ -22,6 +22,8 @@ All **configurations** were already taken care of, so you can simply start to co
 
 > No more struggle with ***babel, typescript, eslint, prettier, jest, styled components, material UI, etc ...*** !
 
+&nbsp;
+
 | ![Template](https://github.com/LeChatErrant/API-template/blob/master/.github/assets/template.gif)                                                                                                                               |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | This repository is **templated**. Use it as a base for your own projects by clicking on **[Use this template](https://github.com/LeChatErrant/front-template/generate)** |
