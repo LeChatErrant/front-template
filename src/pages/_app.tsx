@@ -1,11 +1,12 @@
+import { CssBaseline, ThemeProvider as MuiThemeProvider } from '@mui/material'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import { SWRConfig } from 'swr'
-import { CssBaseline, ThemeProvider as MuiThemeProvider } from '@mui/material'
+import { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
+import { SWRConfig } from 'swr'
 
 import Layout from '../components/Layout'
-import theme from '../utils/theme'
+import { getTheme, initTheme, toggleTheme } from '../utils/theme'
 
 async function fetcher(input: RequestInfo, init: RequestInit) {
   const res = await fetch(input, init)
@@ -13,6 +14,7 @@ async function fetcher(input: RequestInfo, init: RequestInit) {
 }
 
 export default function MyApp({ Component, pageProps }: AppProps) {
+  const [mode, setMode] = useState(initTheme())
   return (
     <SWRConfig
       value={{
@@ -24,9 +26,12 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <Head>
           <title> Front template </title>
         </Head>
-        <MuiThemeProvider theme={theme}>
+        <MuiThemeProvider theme={getTheme(mode)}>
           <CssBaseline />
-          <ThemeProvider theme={theme}>
+          <ThemeProvider theme={getTheme(mode)}>
+            <button onClick={() => setMode(toggleTheme(mode))}>
+              Switch Theme (wip)
+            </button>
             <Component {...pageProps} />
           </ThemeProvider>
         </MuiThemeProvider>
