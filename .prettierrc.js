@@ -6,6 +6,6 @@ module.exports = {
   tabWidth: 2,
   trailingComma: 'es5',
   arrowParens: 'always',
-  importOrder: ['^../', '^./'],
+  importOrder: ['<THIRD_PARTY_MODULES>', '^../', '^./'],
   importOrderSeparation: true,
 }
