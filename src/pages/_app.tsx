@@ -5,8 +5,8 @@ import { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { SWRConfig } from 'swr'
 
-import Layout from '../components/Layout'
-import { getTheme, initTheme, toggleTheme } from '../utils/theme'
+import Layout from '@components/Layout'
+import { getTheme, initTheme, toggleTheme } from '@utils/theme'
 
 async function fetcher(input: RequestInfo, init: RequestInit) {
   const res = await fetch(input, init)

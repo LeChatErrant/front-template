@@ -1,16 +1,18 @@
 # Front template
+
 ![Lint](https://github.com/LeChatErrant/front-template/workflows/Lint/badge.svg)
+
 > This work is **still in progress** and is subject to many changes
 
 # What is it ?
 
- - [x] **Decisions** are already made
- - [x] **Configurations** are already written
- - [x] **CI / CD** pipelines are running
- - [x] **Development** environment is configured
- - [x] **[Backend](https://github.com/LeChatErrant/API-template)** is available
- - [x] **[Deployment](https://github.com/LeChatErrant/ops-template)** is ready
- - [x] **Focus on what matters : *code***
+- [x] **Decisions** are already made
+- [x] **Configurations** are already written
+- [x] **CI / CD** pipelines are running
+- [x] **Development** environment is configured
+- [x] **[Backend](https://github.com/LeChatErrant/API-template)** is available
+- [x] **[Deployment](https://github.com/LeChatErrant/ops-template)** is ready
+- [x] **Focus on what matters : _code_**
 
 &nbsp;
 
@@ -20,15 +22,16 @@ It gives your project a clean base to start since a lot of choices were already 
 
 All **configurations** were already taken care of, so you can simply start to code without worrying about anything else !
 
-> No more struggle with ***babel, typescript, eslint, prettier, jest, styled components, material UI, etc ...*** !
+> No more struggle with **_babel, typescript, eslint, prettier, jest, styled components, material UI, etc ..._** !
 
 &nbsp;
 
-| ![Template](https://github.com/LeChatErrant/API-template/blob/master/.github/assets/template.gif)                                                                                                                               |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ![Template](https://github.com/LeChatErrant/API-template/blob/master/.github/assets/template.gif)                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | This repository is **templated**. Use it as a base for your own projects by clicking on **[Use this template](https://github.com/LeChatErrant/front-template/generate)** |
 
 **[front-template](https://github.com/LeChatErrant/front-template)** is fully integrated with
+
 - **[API-template](https://github.com/LeChatErrant/API-template)**, to provide a backend
 - **[ops-template](https://github.com/LeChatErrant/ops-template)**, to add caching on the top
 
