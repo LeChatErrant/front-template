@@ -8,7 +8,7 @@ module.exports = {
   arrowParens: 'always',
   importOrder: [
     '<THIRD_PARTY_MODULES>',
-    '^@(pages|components|utils|services)/',
+    '^@(pages|components|utils|services|hooks)/',
     '^../',
     '^./',
   ],

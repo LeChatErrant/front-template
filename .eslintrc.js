@@ -25,6 +25,7 @@ module.exports = {
     },
   },
   rules: {
+    'react/jsx-curly-brace-presence': 1,
     'react/react-in-jsx-scope': 0,
     'react/display-name': 0,
     'react/prop-types': 0,
@@ -38,7 +39,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': [
       2,
       {
-        argsIgnorePattern: '^_',
+        argsIgnorePattern: '^(_|props)',
       },
     ],
     'no-console': [

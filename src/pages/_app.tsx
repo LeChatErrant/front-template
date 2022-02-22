@@ -1,12 +1,11 @@
-import { CssBaseline, ThemeProvider as MuiThemeProvider } from '@mui/material'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { SWRConfig } from 'swr'
 
 import Layout from '@components/Layout'
-import { getTheme, initTheme, toggleTheme } from '@utils/theme'
+import useDarkMode from '@hooks/useDarkMode'
+import { GlobalStyles, getTheme } from '@utils/theme'
 
 async function fetcher(input: RequestInfo, init: RequestInit) {
   const res = await fetch(input, init)
@@ -14,7 +13,7 @@ async function fetcher(input: RequestInfo, init: RequestInit) {
 }
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  const [mode, setMode] = useState(initTheme())
+  const { dark, toggleDarkTheme } = useDarkMode()
   return (
     <SWRConfig
       value={{
@@ -22,20 +21,16 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         refreshInterval: 3000,
       }}
     >
-      <Layout>
-        <Head>
-          <title> Front template </title>
-        </Head>
-        <MuiThemeProvider theme={getTheme(mode)}>
-          <CssBaseline />
-          <ThemeProvider theme={getTheme(mode)}>
-            <button onClick={() => setMode(toggleTheme(mode))}>
-              Switch Theme (wip)
-            </button>
-            <Component {...pageProps} />
-          </ThemeProvider>
-        </MuiThemeProvider>
-      </Layout>
+      <Head>
+        <title> Front template </title>
+      </Head>
+      <ThemeProvider theme={getTheme(dark)}>
+        <GlobalStyles />
+        <Layout>
+          <button onClick={toggleDarkTheme}>Switch Theme (wip)</button>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
     </SWRConfig>
   )
 }

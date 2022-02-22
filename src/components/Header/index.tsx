@@ -1,16 +1,9 @@
-import { Toolbar } from '@mui/material'
-import Link from 'next/link'
-
-import { StyledAppBar, StyledLogo } from './styles'
+import { AppBar, Logo } from './styles'
 
 export default function Header() {
   return (
-    <StyledAppBar position="sticky">
-      <Toolbar>
-        <Link href="/" passHref>
-          <StyledLogo logoSize={'35px'} imagePath={'/images/next.svg'} />
-        </Link>
-      </Toolbar>
-    </StyledAppBar>
+    <AppBar>
+      <Logo href="/" imagePath="/images/next.svg" width="35px" height="35px" />
+    </AppBar>
   )
 }
