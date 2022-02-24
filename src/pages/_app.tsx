@@ -26,7 +26,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <ThemeProvider theme={getTheme(dark)}>
         <GlobalStyles />
-        <Layout>
+        <Layout toggleDarkTheme={toggleDarkTheme} dark={dark}>
           <button onClick={toggleDarkTheme}>Switch Theme (wip)</button>
           <Component {...pageProps} />
         </Layout>

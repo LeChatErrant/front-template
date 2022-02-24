@@ -5,13 +5,14 @@ import ImageLink from '../ImageLink'
 export const AppBar = styled.div`
   position: sticky;
   top: 0;
-  height: 60px;
+  height: 75px;
   display: flex;
   align-items: center;
   box-shadow: ${({ theme }) => theme.shadow};
+  padding: 0 20px;
 `
 
 export const Logo = styled(ImageLink)`
-  margin: 0 20px;
   filter: invert(${({ theme }) => (theme.dark ? 1 : 0)});
+  transition: filter 0.2s;
 `
