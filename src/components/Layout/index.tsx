@@ -2,7 +2,7 @@ import { Divider } from '@mui/material'
 import { ReactNode } from 'react'
 
 import Body from '@components/Body'
-import Header from '@components/Header'
+import NavBar from '@components/NavBar'
 import Panel from '@components/Panel'
 
 import { LayoutProps } from './props'
@@ -15,7 +15,7 @@ export default function Layout({
 }: { children: ReactNode } & LayoutProps) {
   return (
     <S.AppLayout>
-      <Header toggleDarkTheme={toggleDarkTheme} dark={dark} />
+      <NavBar toggleDarkTheme={toggleDarkTheme} dark={dark} />
       <Divider orientation="vertical" flexItem />
       <Body>{children}</Body>
       <Divider orientation="vertical" flexItem />
