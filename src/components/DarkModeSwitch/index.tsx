@@ -1,20 +1,14 @@
 import { useState } from 'react'
 
-import { DarkModeSwitchProps } from '@components/DarkModeSwitch/props'
-
-import {
-  BaseContainer,
-  CustomToggle,
-  InvisibleInput,
-  ToggleContainer,
-} from './styles'
+import { DarkModeSwitchProps } from './props'
+import * as S from './styles'
 
 export default function DarkModeSwitch(props: DarkModeSwitchProps) {
   const [checked, setChecked] = useState(props.checked)
 
   return (
-    <BaseContainer {...props}>
-      <InvisibleInput
+    <S.BaseContainer {...props}>
+      <S.InvisibleInput
         type="checkbox"
         checked={checked}
         onChange={async () => {
@@ -22,9 +16,9 @@ export default function DarkModeSwitch(props: DarkModeSwitchProps) {
           props.onSwitch(!checked)
         }}
       />
-      <ToggleContainer>
-        <CustomToggle />
-      </ToggleContainer>
-    </BaseContainer>
+      <S.ToggleContainer>
+        <S.CustomToggle />
+      </S.ToggleContainer>
+    </S.BaseContainer>
   )
 }

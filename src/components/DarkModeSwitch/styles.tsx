@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { DarkModeSwitchProps } from '@components/DarkModeSwitch/props'
+import { DarkModeSwitchProps } from './props'
 
 export const BaseContainer = styled.label<DarkModeSwitchProps>`
   --width: ${(props) => props.width};

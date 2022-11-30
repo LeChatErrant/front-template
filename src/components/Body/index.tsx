@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 
-import { MainContainer } from '@components/Body/styles'
+import * as S from './styles'
 
 export default function Body({ children }: { children: ReactNode }) {
-  return <MainContainer>{children}</MainContainer>
+  return <S.Body>{children}</S.Body>
 }
