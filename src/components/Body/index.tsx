@@ -1,5 +1,7 @@
 import { ReactNode } from 'react'
 
+import { MainContainer } from '@components/Body/styles'
+
 export default function Body({ children }: { children: ReactNode }) {
-  return <main>{children}</main>
+  return <MainContainer>{children}</MainContainer>
 }

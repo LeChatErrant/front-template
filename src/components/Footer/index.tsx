@@ -1,3 +1,5 @@
+import { Panel } from '@components/Footer/styles'
+
 export default function Footer() {
-  return <footer>Footer</footer>
+  return <Panel>Footer</Panel>
 }
