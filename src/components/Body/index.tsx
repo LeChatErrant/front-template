@@ -1,7 +1,5 @@
-import styled from 'styled-components'
+import { ReactNode } from 'react'
 
-export const Body = styled.body`
-  * {
-    transition: color 0.5s linear;
-  }
-`
+export default function Body({ children }: { children: ReactNode }) {
+  return <main>{children}</main>
+}

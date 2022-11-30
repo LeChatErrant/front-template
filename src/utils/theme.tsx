@@ -1,62 +1,49 @@
-import { DefaultTheme, createGlobalStyle } from 'styled-components'
+import { createTheme } from '@mui/material'
+import { createGlobalStyle } from 'styled-components'
 
-declare module 'styled-components' {
-  export interface DefaultTheme {
-    dark: boolean
-    text: {
-      primary: string
-      secondary: string
-    }
-    background: {
-      default: string
-      gradient: string
-    }
-    shadow: string
-  }
-}
+/**
+ * Common CSS used in both dark and light theme
+ */
+export const baseTheme = createTheme({
+  typography: {
+    fontFamily: 'Roboto',
+    fontSize: 16,
+  },
+})
 
-export const lightTheme: DefaultTheme = {
-  dark: false,
-  text: {
-    primary: '#000000',
-    secondary: '#ffffff',
+/**
+ * Dark theme
+ */
+export const darkTheme = createTheme(baseTheme, {
+  palette: {
+    mode: 'dark',
   },
-  background: {
-    default: '#ffffff',
-    gradient: 'linear-gradient(45deg, #833AB4, #FD1D1D, #FCB045)',
-  },
-  shadow: '3px 6px 10px rgba(0, 0, 0, 0.15)',
-}
+})
 
-export const darkTheme: DefaultTheme = {
-  dark: true,
-  text: {
-    primary: '#ffffff',
-    secondary: '#000000',
+/**
+ * Light theme
+ */
+export const lightTheme = createTheme(baseTheme, {
+  palette: {
+    mode: 'light',
   },
-  background: {
-    default: '#000000',
-    gradient: 'linear-gradient(45deg, #833AB4, #FD1D1D, #FCB045)',
-  },
-  shadow: '0 6px 10px rgba(255, 255, 255, 0.15)',
-}
+})
 
+/**
+ * Return current theme depending on the given parameter
+ *
+ * @param dark True to get dark theme, false otherwise
+ * @returns Current theme
+ */
 export function getTheme(dark: boolean) {
   return dark ? darkTheme : lightTheme
 }
 
+/**
+ * CSS applied on the whole application
+ */
 export const GlobalStyles = createGlobalStyle`
-  body {
-    background-color: ${({ theme }) => theme.background.default};
-    color: ${({ theme }) => theme.text.primary};
-
-    font-family: Roboto;
-    font-size: 16px;
-    border-radius: 8px;
-    margin: 0;
-  }
-  
   * {
-    transition: color,background-color 0.2s linear;
+    transition: color, background-color 0.2s linear;
   }
 `

@@ -1,6 +1,7 @@
+import { CssBaseline, ThemeProvider as MuiThemeProvider } from '@mui/material'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components'
 import { SWRConfig } from 'swr'
 
 import Layout from '@components/Layout'
@@ -24,13 +25,15 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title> Front template </title>
       </Head>
-      <ThemeProvider theme={getTheme(dark)}>
+      <MuiThemeProvider theme={getTheme(dark)}>
+        <CssBaseline />
         <GlobalStyles />
-        <Layout toggleDarkTheme={toggleDarkTheme} dark={dark}>
-          <button onClick={toggleDarkTheme}>Switch Theme (wip)</button>
-          <Component {...pageProps} />
-        </Layout>
-      </ThemeProvider>
+        <StyledComponentsThemeProvider theme={getTheme(dark)}>
+          <Layout toggleDarkTheme={toggleDarkTheme} dark={dark}>
+            <Component {...pageProps} />
+          </Layout>
+        </StyledComponentsThemeProvider>
+      </MuiThemeProvider>
     </SWRConfig>
   )
 }

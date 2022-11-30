@@ -1,6 +1,6 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'unused-imports'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
@@ -48,5 +48,6 @@ module.exports = {
         allow: ['warn'],
       },
     ],
+    'unused-imports/no-unused-imports': 'warn',
   },
 }

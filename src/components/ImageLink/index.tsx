@@ -8,7 +8,7 @@ export default function ImageLink(props: ImageLinkProps) {
   return (
     <Container {...props}>
       <Link href={props.href}>
-        <Image src={props.imagePath} layout="fill" />
+        <Image src={props.imagePath} fill={true} alt={props.alt} />
       </Link>
     </Container>
   )
