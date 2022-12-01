@@ -37,7 +37,7 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 0,
     '@typescript-eslint/no-use-before-define': 0,
     '@typescript-eslint/no-unused-vars': [
-      2,
+      1,
       {
         argsIgnorePattern: '^(_|props)',
       },

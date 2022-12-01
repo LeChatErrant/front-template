@@ -7,7 +7,7 @@ import * as S from './styles'
 export default function ImageLink(props: ImageLinkProps) {
   return (
     <S.ImageLinkContainer {...props}>
-      <Link href={props.href}>
+      <Link href={props.href} passHref>
         <Image src={props.imagePath} fill={true} alt={props.alt} />
       </Link>
     </S.ImageLinkContainer>
