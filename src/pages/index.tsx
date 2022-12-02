@@ -1,12 +1,20 @@
 import Head from 'next/head'
 
+import Feed from '@components/Feed'
+import Panel from '@components/Panel'
+
+import * as S from './styles'
+
 export default function Home() {
   return (
     <>
       <Head>
         <title>Home</title>
       </Head>
-      <h1>Body</h1>
+      <S.HomeLayout>
+        <Feed />
+        <Panel />
+      </S.HomeLayout>
     </>
   )
 }
