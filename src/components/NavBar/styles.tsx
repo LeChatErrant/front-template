@@ -10,6 +10,6 @@ export const NavBar = styled.nav`
 
   width: 100px;
   height: 100vh;
-  padding: 20px 0;
+  padding: 55px 0;
   border-right: 0.5px solid rgba(0, 0, 0, 0.12);
 `

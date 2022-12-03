@@ -6,6 +6,7 @@ import { Settings2Outline } from '@styled-icons/evaicons-outline/Settings2Outlin
 import Image from 'next/image'
 import Link from 'next/link'
 
+import DarkModeSwitch from '@components/DarkModeSwitch'
 import Spacer from '@components/Spacer'
 
 import * as S from './styles'
@@ -26,6 +27,12 @@ export default function NavBar() {
         <Edit size={30} />
       </Link>
       <Spacer flex={1} />
+      <DarkModeSwitch
+        width="25px"
+        height="25px"
+        checked={true}
+        onSwitch={() => {}}
+      />
       <Link href="/">
         <Settings2Outline size={30} />
       </Link>

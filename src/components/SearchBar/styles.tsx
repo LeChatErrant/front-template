@@ -9,8 +9,13 @@ export const InputBox = styled(TextField)`
     border-color: rgba(0, 0, 0, 0.12);
   }
 
+  svg {
+    margin-right: 20px;
+  }
+
   input {
-    padding: 16px 40px;
+    padding: 0px 40px;
+    height: 50px;
     font-size: 0.9em;
   }
 `
