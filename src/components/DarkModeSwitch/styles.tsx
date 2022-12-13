@@ -34,6 +34,7 @@ export const ToggleContainer = styled.span`
   width: var(--width);
   border-radius: var(--toggle-radius);
   transition: background-color var(--transition-speed) var(--transition-ease);
+  overflow: hidden;
 `
 
 export const CustomToggle = styled.div`
@@ -46,7 +47,7 @@ export const CustomToggle = styled.div`
   width: var(--toggle-size);
   height: var(--toggle-size);
 
-  // Occulting filter for the moon
+  // Occultant filter for the moon
   &::after {
     content: '';
     position: absolute;

@@ -7,11 +7,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import DarkModeSwitch from '@components/DarkModeSwitch'
+import { NavBarProps } from '@components/NavBar/props'
 import Spacer from '@components/Spacer'
 
 import * as S from './styles'
 
-export default function NavBar() {
+export default function NavBar(props: NavBarProps) {
   return (
     <S.NavBar>
       <Link href="/">
@@ -28,10 +29,12 @@ export default function NavBar() {
       </Link>
       <Spacer flex={1} />
       <DarkModeSwitch
-        width="25px"
-        height="25px"
-        checked={true}
-        onSwitch={() => {}}
+        width="30px"
+        height="30px"
+        dark={props.dark}
+        toggleDarkMode={() => {
+          props.toggleDarkTheme(!props.dark)
+        }}
       />
       <Link href="/">
         <Settings2Outline size={30} />

@@ -2,48 +2,40 @@ import { createTheme } from '@mui/material'
 import { createGlobalStyle } from 'styled-components'
 
 /**
- * Common CSS used in both dark and light theme
- */
-export const baseTheme = createTheme({
-  typography: {
-    fontFamily: 'Roboto',
-    fontSize: 16,
-  },
-})
-
-/**
- * Dark theme
- */
-export const darkTheme = createTheme(baseTheme, {
-  palette: {
-    mode: 'dark',
-  },
-})
-
-/**
  * Light theme
  */
-export const lightTheme = createTheme(baseTheme, {
+export const lightTheme = createTheme({
   palette: {
     mode: 'light',
   },
 })
 
 /**
+ * Dark theme
+ */
+export const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+})
+
+/**
  * Return current theme depending on the given parameter
  *
- * @param dark True to get dark theme, false otherwise
+ * @param dark True for dark theme, false otherwise
  * @returns Current theme
  */
-export function getTheme(dark: boolean) {
+export function resolveTheme(dark: boolean) {
   return dark ? darkTheme : lightTheme
 }
 
 /**
  * CSS applied on the whole application
  */
-export const GlobalStyles = createGlobalStyle`
+export const InjectGlobalStyle = createGlobalStyle`
   * {
+    font-size: 16px;
+    font-family: "Roboto";
     transition: color, background-color 0.2s linear;
   }
 `

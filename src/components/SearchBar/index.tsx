@@ -1,5 +1,5 @@
 import { InputAdornment } from '@mui/material'
-import { Search2 } from '@styled-icons/remix-line/Search2'
+import { Search2 } from '@styled-icons/remix-line'
 
 import * as S from './styles'
 
