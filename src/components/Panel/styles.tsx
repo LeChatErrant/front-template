@@ -7,5 +7,5 @@ export const Panel = styled.aside`
 
   width: 470px;
   height: 100vh;
-  border-left: 0.5px solid rgba(0, 0, 0, 0.12);
+  border-left: 0.5px solid ${({ theme }) => theme.palette.divider}; ;
 `

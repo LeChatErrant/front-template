@@ -6,5 +6,5 @@ export const Toolbar = styled.div`
   align-items: center;
 
   padding-bottom: 40px;
-  border-bottom: 0.5px solid rgba(0, 0, 0, 0.12);
+  border-bottom: 0.5px solid ${({ theme }) => theme.palette.divider}; ;
 `

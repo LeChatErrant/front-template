@@ -6,7 +6,7 @@ export const InputBox = styled(TextField)`
 
   fieldset {
     border-radius: 999px;
-    border-color: rgba(0, 0, 0, 0.12);
+    border-color: ${({ theme }) => theme.palette.divider};
   }
 
   svg {

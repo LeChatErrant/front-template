@@ -14,7 +14,7 @@ export const NavBar = styled.nav`
   width: 140px;
   height: 100vh;
   padding: 55px 0;
-  border-right: 0.5px solid rgba(0, 0, 0, 0.12);
+  border-right: 0.5px solid ${({ theme }) => theme.palette.divider};
 `
 
 export const HomeImage = styled(Image)`

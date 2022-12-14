@@ -6,16 +6,11 @@ export const NavButton = styled(ToggleButton)`
   border: 0.5px solid rgba(0, 0, 0, 0);
 
   :hover {
-    border: 0.5px solid rgba(0, 0, 0, 0.07);
+    border: 0.5px solid ${({ theme }) => theme.palette.divider};
   }
 
   &.Mui-selected {
-    color: white;
-    background: linear-gradient(
-      135deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(65, 65, 65, 1) 50%,
-      rgba(2, 0, 36, 1) 100%
-    );
+    color: ${({ theme }) => theme.palette.text.inverted};
+    background: ${({ theme }) => theme.palette.background.gradient};
   }
 `
