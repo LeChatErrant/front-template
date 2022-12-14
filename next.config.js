@@ -1,5 +1,11 @@
-/** @type {import('next').NextConfig} */
+const withTM = require('next-transpile-modules')([
+  '@mui/material',
+  '@mui/system',
+])
 
+/**
+ * @type {import('next').NextConfig}
+ */
 const nextConfig = {
   reactStrictMode: true,
   compiler: {
@@ -17,4 +23,4 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+module.exports = withTM(nextConfig)
