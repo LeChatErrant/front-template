@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { ReactNode } from 'react'
 
-import { NavButtonProps } from '@components/NavBar/NavButton/props'
+import { NavButtonProps } from '@components/Layout/NavBar/NavButton/props'
 
 import * as S from './styles'
 

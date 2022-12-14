@@ -1,6 +1,6 @@
-import SearchBar from '@components/SearchBar'
 import Spacer from '@components/Spacer'
 
+import SearchBar from './SearchBar'
 import * as S from './styles'
 
 export default function Toolbar() {

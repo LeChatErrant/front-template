@@ -6,10 +6,10 @@ import { Settings2Outline } from '@styled-icons/evaicons-outline/Settings2Outlin
 import Link from 'next/link'
 import { useState } from 'react'
 
-import NavButton from '@components/NavBar/NavButton'
-import { NavBarProps } from '@components/NavBar/props'
 import Spacer from '@components/Spacer'
 
+import NavButton from './NavButton'
+import { NavBarProps } from './props'
 import * as S from './styles'
 
 export default function NavBar(props: NavBarProps) {
@@ -17,7 +17,7 @@ export default function NavBar(props: NavBarProps) {
 
   return (
     <S.NavBar>
-      <Link href="/" onClick={() => setIndex(0)}>
+      <Link href="/src/pages" onClick={() => setIndex(0)}>
         <S.HomeImage src="/images/next.svg" alt="Home" width={40} height={40} />
       </Link>
       <NavButton

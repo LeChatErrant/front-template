@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styled, { css } from 'styled-components'
 
-import DarkModeSwitch from '@components/DarkModeSwitch'
+import DarkModeSwitch from './DarkModeSwitch'
 
 export const NavBar = styled.nav`
   position: sticky;
