@@ -1,5 +1,10 @@
-module.exports = {
-  env: {
-    API_URL: process.env.API_URL || 'http://localhost:8000',
+/** @type {import('next').NextConfig} */
+
+const nextConfig = {
+  reactStrictMode: true,
+  compiler: {
+    styledComponents: true,
   },
 }
+
+module.exports = nextConfig

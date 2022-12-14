@@ -4,7 +4,7 @@ import { DarkModeSwitchProps } from './props'
 import * as S from './styles'
 
 export default function DarkModeSwitch(props: DarkModeSwitchProps) {
-  const [checked, setChecked] = useState(!props.dark)
+  const [checked, setChecked] = useState(props.dark)
 
   return (
     <S.BaseContainer {...props}>

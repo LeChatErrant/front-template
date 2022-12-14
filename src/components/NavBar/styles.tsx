@@ -1,4 +1,7 @@
+import Image from 'next/image'
 import styled from 'styled-components'
+
+import DarkModeSwitch from '@components/DarkModeSwitch'
 
 export const NavBar = styled.nav`
   position: sticky;
@@ -8,8 +11,16 @@ export const NavBar = styled.nav`
   justify-content: flex-start;
   gap: 30px;
 
-  width: 100px;
+  width: 140px;
   height: 100vh;
   padding: 55px 0;
   border-right: 0.5px solid rgba(0, 0, 0, 0.12);
+`
+
+export const HomeImage = styled(Image)`
+  margin-bottom: 35px;
+`
+
+export const NavDarkMode = styled(DarkModeSwitch)`
+  margin: 12px 0;
 `

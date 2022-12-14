@@ -3,32 +3,49 @@ import { Edit } from '@styled-icons/boxicons-regular/Edit'
 import { Home } from '@styled-icons/boxicons-regular/Home'
 import { LogOut } from '@styled-icons/boxicons-regular/LogOut'
 import { Settings2Outline } from '@styled-icons/evaicons-outline/Settings2Outline'
-import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 
-import DarkModeSwitch from '@components/DarkModeSwitch'
+import NavButton from '@components/NavBar/NavButton'
 import { NavBarProps } from '@components/NavBar/props'
 import Spacer from '@components/Spacer'
 
 import * as S from './styles'
 
 export default function NavBar(props: NavBarProps) {
+  const [index, setIndex] = useState(0)
+
   return (
     <S.NavBar>
-      <Link href="/">
-        <Image src="/images/next.svg" alt="Home" width={40} height={40} />
+      <Link href="/" onClick={() => setIndex(0)}>
+        <S.HomeImage src="/images/next.svg" alt="Home" width={40} height={40} />
       </Link>
-      <Link href="/">
+      <NavButton
+        href="/"
+        navButtonIndex={0}
+        navBarCurrentIndex={index}
+        setIndex={setIndex}
+      >
         <Home size={30} />
-      </Link>
-      <Link href="/">
+      </NavButton>
+      <NavButton
+        href="/bookmarks"
+        navButtonIndex={1}
+        navBarCurrentIndex={index}
+        setIndex={setIndex}
+      >
         <Bookmarks size={30} />
-      </Link>
-      <Link href="/">
+      </NavButton>
+      <NavButton
+        href="/write"
+        navButtonIndex={2}
+        navBarCurrentIndex={index}
+        setIndex={setIndex}
+      >
         <Edit size={30} />
-      </Link>
+      </NavButton>
       <Spacer flex={1} />
-      <DarkModeSwitch
+      <S.NavDarkMode
         width="30px"
         height="30px"
         dark={props.dark}
@@ -36,12 +53,22 @@ export default function NavBar(props: NavBarProps) {
           props.toggleDarkTheme(!props.dark)
         }}
       />
-      <Link href="/">
+      <NavButton
+        href="/settings"
+        navButtonIndex={3}
+        navBarCurrentIndex={index}
+        setIndex={setIndex}
+      >
         <Settings2Outline size={30} />
-      </Link>
-      <Link href="/">
+      </NavButton>
+      <NavButton
+        href="/"
+        navButtonIndex={4}
+        navBarCurrentIndex={index}
+        setIndex={setIndex}
+      >
         <LogOut size={30} />
-      </Link>
+      </NavButton>
     </S.NavBar>
   )
 }
