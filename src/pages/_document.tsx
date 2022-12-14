@@ -1,11 +1,14 @@
+import createEmotionServer from '@emotion/server/create-instance'
 import Document, {
   DocumentContext,
-  Html,
   Head,
+  Html,
   Main,
   NextScript,
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+
+import createEmotionCache from '@utils/emotionCache'
 
 export default class MyDocument extends Document {
   render(): JSX.Element {
@@ -19,6 +22,8 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
             rel="stylesheet"
           />
+          {/*Needed for materialUI*/}
+          {(this.props as any).emotionStyleTags}
         </Head>
         <body>
           <Main />
@@ -32,16 +37,39 @@ export default class MyDocument extends Document {
     const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
 
+    /**
+     * Needed for materialUI
+     */
+    const cache = createEmotionCache()
+    const { extractCriticalToChunks } = createEmotionServer(cache)
+
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: (App) => (props) =>
-            sheet.collectStyles(<App {...props} />),
+          enhanceApp: (App: any) => (props) =>
+            sheet.collectStyles(<App emotionCache={cache} {...props} />),
         })
 
       const initialProps = await Document.getInitialProps(ctx)
+
+      /**
+       * Needed for materialUI
+       * This is important. It prevents Emotion to render invalid HTML.
+       * See https://github.com/mui/material-ui/issues/26561#issuecomment-855286153
+       */
+      const emotionStyles = extractCriticalToChunks(initialProps.html)
+      const emotionStyleTags = emotionStyles.styles.map((style) => (
+        <style
+          data-emotion={`${style.key} ${style.ids.join(' ')}`}
+          key={style.key}
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: style.css }}
+        />
+      ))
+
       return {
         ...initialProps,
+        emotionStyleTags,
         styles: (
           <>
             {initialProps.styles}
