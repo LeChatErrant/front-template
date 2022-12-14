@@ -5,6 +5,16 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  /**
+   * Changed the default mui style engine (emotion) by an implementation using styled components
+   */
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@mui/styled-engine': '@mui/styled-engine-sc',
+    }
+    return config
+  },
 }
 
 module.exports = nextConfig

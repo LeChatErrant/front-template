@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const NavButton = styled(ToggleButton)`
   width: 72px;
-  border: 0.5px solid rgba(0, 0, 0, 0);
+  border: 0.5px solid transparent;
 
   :hover {
     border: 0.5px solid ${({ theme }) => theme.palette.divider};
