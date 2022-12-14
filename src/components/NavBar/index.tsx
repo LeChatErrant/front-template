@@ -62,7 +62,7 @@ export default function NavBar(props: NavBarProps) {
         <Settings2Outline size={30} />
       </NavButton>
       <NavButton
-        href="/"
+        href="/logout"
         navButtonIndex={4}
         navBarCurrentIndex={index}
         setIndex={setIndex}

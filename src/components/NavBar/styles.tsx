@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import DarkModeSwitch from '@components/DarkModeSwitch'
 
@@ -19,6 +19,12 @@ export const NavBar = styled.nav`
 
 export const HomeImage = styled(Image)`
   margin-bottom: 35px;
+
+  ${({ theme }) =>
+    theme.palette.mode === 'dark' &&
+    css`
+      filter: invert(100%);
+    `}
 `
 
 export const NavDarkMode = styled(DarkModeSwitch)`
