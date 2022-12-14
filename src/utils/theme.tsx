@@ -76,4 +76,10 @@ export const InjectGlobalStyle = createGlobalStyle`
     font-family: "Roboto";
     transition: color, background-color 0.2s linear;
   }
+
+  h1 {
+    font-size: 32px;
+    letter-spacing: .1rem;
+    margin: 0;
+  }
 `
