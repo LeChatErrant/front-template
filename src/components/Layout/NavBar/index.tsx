@@ -17,7 +17,7 @@ export default function NavBar(props: NavBarProps) {
 
   return (
     <S.NavBar>
-      <Link href="/src/pages" onClick={() => setIndex(0)}>
+      <Link href="/" onClick={() => setIndex(0)}>
         <S.HomeImage src="/images/next.svg" alt="Home" width={40} height={40} />
       </Link>
       <NavButton
