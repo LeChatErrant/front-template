@@ -32,7 +32,7 @@
     "swr": "^2.0.4"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^13.1.6",
+    "@next/eslint-plugin-next": "^13.2.3",
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
     "@types/node": "18.14.2",
     "@types/react": "18.0.28",
