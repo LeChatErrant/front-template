@@ -22,7 +22,7 @@
     "@emotion/styled": "^11.10.6",
     "@mui/material": "^5.11.16",
     "@mui/styled-engine": "npm:@mui/styled-engine-sc@^5.11.0",
-    "@mui/styled-engine-sc": "^5.11.11",
+    "@mui/styled-engine-sc": "^5.12.0",
     "next": "13.3.0",
     "next-transpile-modules": "^10.0.0",
     "react": "18.2.0",
