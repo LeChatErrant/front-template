@@ -20,7 +20,7 @@
     "@emotion/react": "^11.10.6",
     "@emotion/server": "^11.10.0",
     "@emotion/styled": "^11.10.6",
-    "@mui/material": "^5.11.16",
+    "@mui/material": "^5.12.0",
     "@mui/styled-engine": "npm:@mui/styled-engine-sc@^5.11.0",
     "@mui/styled-engine-sc": "^5.12.0",
     "next": "13.3.0",
